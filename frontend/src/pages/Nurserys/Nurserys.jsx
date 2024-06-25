@@ -6,4 +6,4 @@ const Nurserys = () => {
   )
 }
 
-export default Nurserys
+export default Nurserys;
