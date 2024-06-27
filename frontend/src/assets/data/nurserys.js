@@ -4,7 +4,7 @@ import nurseryImg03 from "../images/nursery-img03.png";
 
 export const nurserys = [
     {
-      id: "01",
+      id: "01", 
       name: "Green Thumb Nursery",
       typeOfFlower: "Roses, Tulips, Orchids",
       avgRating: 4.7,

@@ -1,19 +1,19 @@
 export const services = [
     {
-      name: "Roses",
+      name: "Roses", 
       desc: "Discover a wide variety of roses, from classic red to unique hybrids, perfect for any garden or bouquet.",
       bgColor: "rgba(255, 0, 0, .2)",
       textColor: "#FF0000",
     },
     {
       name: "Tulips",
-      desc: "Brighten your garden with our selection of tulips, available in numerous colors and styles.",
+      desc: "Brighten your garden with our selection of tulips, available in numerous colors , styles , elegance and fragnance.",
       bgColor: "rgba(255, 182, 193, .2)",
       textColor: "#FFB6C1",
     },
     {
       name: "Orchids",
-      desc: "Explore our exotic orchid varieties, perfect for adding a touch of elegance to your home or garden.",
+      desc: "Explore our exotic orchid varieties, perfect for adding a touch of elegance to your home , garden , society or community area.",
       bgColor: "rgba(123, 104, 238, .2)",
       textColor: "#7B68EE",
     },
@@ -25,9 +25,9 @@ export const services = [
     },
     {
       name: "Daisies",
-      desc: "Cheerful and resilient, daisies are a great addition to any garden, providing vibrant colors and easy care.",
+      desc: "Cheerful and resilient, daisies are a great addition to any garden, providing vibrant colors and easy care adding extra beauty to your residence.",
       bgColor: "rgba(255, 255, 0, .2)",
-      textColor: "#FFFF00",
+      textColor: "#FFD700",
     },
     {
       name: "Lilies",
@@ -43,7 +43,7 @@ export const services = [
     },
     {
       name: "Hydrangeas",
-      desc: "With their large, colorful blooms, hydrangeas are a popular choice for gardens and floral displays.",
+      desc: "With their large, colorful blooms, hydrangeas are a popular choice for gardens and floral displays. They are extremely rare to have.",
       bgColor: "rgba(135, 206, 250, .2)",
       textColor: "#87CEFA",
     },
@@ -52,11 +52,5 @@ export const services = [
       desc: "Versatile and long-lasting, carnations are a favorite for both gardens and bouquets, available in a variety of colors.",
       bgColor: "rgba(250, 128, 114, .2)",
       textColor: "#FA8072",
-    },
-    {
-      name: "Ferns",
-      desc: "Add lush greenery to your indoor or outdoor space with our collection of ferns, known for their delicate and intricate leaves.",
-      bgColor: "rgba(34, 139, 34, .2)",
-      textColor: "#228B22",
     },
 ];
