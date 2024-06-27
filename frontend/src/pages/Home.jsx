@@ -8,10 +8,13 @@ import icon03 from '../assets/images/icon03.png'
 import featureImg from '../assets/images/feature-img.png'
 import videoIcon from '../assets/images/video-icon.png'
 import avatarIcon from '../assets/images/avatar-icon.png'
+import faqImg from '../assets/images/faq-img.png';
 import {Link} from 'react-router-dom'
 import {BsArrowRight} from 'react-icons/bs'
 import About from '../components/About/About';
 import ServiceList from '../components/Services/ServiceList';
+import NurseryList from '../components/Nurserys/NurseryList';
+import FaqList from '../components/Faq/FaqList';
 
 
 const Home = () => {
@@ -251,15 +254,8 @@ const Home = () => {
                   Karan Sharma
                 </h4>
               </div>
-
             </div>
-
           </div>
-
-
-
-
-
           </div>
         </div>
       </section>
@@ -267,6 +263,60 @@ const Home = () => {
       {/* ==================== Feature Section Ends ======================= */}
 
 
+
+      {/* ==================== Nurseries start ======================= */}
+
+      <section>
+        <div className="container">
+          <div className="xl: w-[470px] mx-auto ">
+            <h2 className="heading text-center">Best of our Nurseries</h2>
+              
+            <p className="text__para text-center">
+              Country's best plant providing services for everyone. Quality plants
+              after direct meeting between seller & buyer.
+            </p>
+          </div>
+
+          <NurseryList /> 
+        </div>
+      </section>
+
+      {/* ==================== Nurseries start ======================= */}
+
+
+      {/* ==================== FAQ start ======================= */}
+
+      <section>
+        <div className="container">
+          <div className="flex justify-between gap-[50px] lg:gap-0 ">
+            <div className="w-1/2 hidden md:block ">
+              <img src={faqImg} alt="" className='rounded-2xl' />
+            </div>
+
+            <div className="w-full md:w-1/2">
+              <h2 className="heading">
+                Most asked questions by customers
+              </h2>
+
+              <FaqList /> 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== FAQ end ======================= */}
+
+
+      {/* ==================== Testimonial start ======================= */}
+
+      <section>
+        <div className="container">
+          
+        </div>
+      </section>
+
+
+      {/* ==================== Testimonial end ======================= */}
 
     </>
   )

@@ -3,7 +3,7 @@ export const faqs = [
       question: "Can I read reviews of nurseries?",
       content:
         "Yes, each nursery profile includes reviews and ratings from other users. You can also leave your own review after visiting a nursery.",
-    },
+    }, 
     {
       question: "What information is available about each nursery",
       content:
