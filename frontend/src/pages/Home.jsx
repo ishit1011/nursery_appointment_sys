@@ -15,6 +15,7 @@ import About from '../components/About/About';
 import ServiceList from '../components/Services/ServiceList';
 import NurseryList from '../components/Nurserys/NurseryList';
 import FaqList from '../components/Faq/FaqList';
+import Testimonial from '../components/Testimonial/Testimonial';
 
 
 const Home = () => {
@@ -176,7 +177,7 @@ const Home = () => {
       {/* ==================== Services Section Starts ======================= */}
       <section>
         <div className="container">
-          <div className="xl: w-[470px] mx-auto ">
+          <div className="w-full lg:w-[470px] mx-auto mb-10 ">
             <h2 className="heading text-center">Our Nursery Services</h2>
             
             <p className="text__para text-center">
@@ -268,7 +269,7 @@ const Home = () => {
 
       <section>
         <div className="container">
-          <div className="xl: w-[470px] mx-auto ">
+          <div className="w-full lg:w-[470px] mx-auto mb-10 ">
             <h2 className="heading text-center">Best of our Nurseries</h2>
               
             <p className="text__para text-center">
@@ -311,7 +312,16 @@ const Home = () => {
 
       <section>
         <div className="container">
-          
+          <div className="w-full lg:w-[470px] mx-auto mb-10 ">
+            <h2 className="heading text-center">What our customer say</h2>
+              
+            <p className="text__para text-center">
+              Country's best plant providing services for everyone. Quality plants
+              after direct meeting between seller & buyer.
+            </p>
+          </div>
+
+          <Testimonial />
         </div>
       </section>
 
