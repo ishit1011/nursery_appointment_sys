@@ -1,7 +1,7 @@
 export const services = [
     {
       name: "Roses", 
-      desc: "Discover a wide variety of roses, from classic red to unique hybrids, perfect for any garden or bouquet.",
+      desc: "Discover a wide variety of roses, from classic red to unique hybrids, perfect for any garden or bouquet. Also can be used for gift purposes.",
       bgColor: "rgba(255, 0, 0, .2)",
       textColor: "#FF0000",
     },

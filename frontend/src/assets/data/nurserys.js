@@ -6,7 +6,7 @@ export const nurserys = [
     {
       id: "01", 
       name: "Green Thumb Nursery",
-      speciality: "Roses, Tulips, Orchids",
+      speciality: "Roses",
       avgRating: 4.7,
       totalRating: 350,
       photo: nurseryImg01,
@@ -16,7 +16,7 @@ export const nurserys = [
     {
       id: "02",
       name: "Bloom Haven",
-      speciality: "Succulents, Daisies, Lilies",
+      speciality: "Lilies",
       avgRating: 4.8,
       totalRating: 420,
       photo: nurseryImg02,
@@ -26,7 +26,7 @@ export const nurserys = [
     {
       id: "03",
       name: "Floral Oasis",
-      speciality: "Marigolds, Hydrangeas, Carnations",
+      speciality: "Marigolds",
       avgRating: 4.6,
       totalRating: 310,
       photo: nurseryImg03,
