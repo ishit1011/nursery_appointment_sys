@@ -1,18 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import signupImg from '../assets/images/signup2.jpg'
 import avatar from '../assets/images/nursery-img01.png'
 import {Link} from 'react-router-dom'
 
 const Signup = () => {
 
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [previewURL, setPreviewURL] = useState('');
+
   const [formData, setFormData] = useState({
+    name: '',
     email: '',
     password: '',
+    photo: selectedFile,
+    gender: '',
+    role: 'customer',
   });
 
   const handleInputChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value});
   };
+
+  const handleFileInputChange = async(event) =>{
+    const file = event.target.files[0]
+
+    // CLOUDINARY to upload images
+  }
+
+  const submitHandler = async event=>{
+    event.preventDefault()
+  }
 
   return (
     <section className="px-5 xl:px-0 ">
@@ -31,13 +48,14 @@ const Signup = () => {
               Create an <span className=' text-primaryColor '>account</span>
             </h3>
 
-            <form action="">
+            <form action="" onSubmit={submitHandler}>
               <div className="mb-5">
                 <input 
                   type="text" 
                   placeholder='Full Name'
                   name='name'
-                  value=''
+                  value={formData.name}
+                  onChange={handleInputChange}
                   className='w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor-pointer '
                   required
                 />
@@ -48,7 +66,8 @@ const Signup = () => {
                   type="email" 
                   placeholder='Enter your email'
                   name='email'
-                  value=''
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className='w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor-pointer '
                   required
                 />
@@ -59,7 +78,8 @@ const Signup = () => {
                   type="password" 
                   placeholder='Password'
                   name='password'
-                  value=''
+                  value={formData.password}
+                  onChange={handleInputChange}
                   className='w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor-pointer '
                   required
                 />
@@ -68,7 +88,7 @@ const Signup = () => {
               <div className="mb-5 flex items-center justify-between ">
                 <label className="text-headingColor font-bold text-[16px] leading-7 ">
                   Are you a:
-                  <select name="role" id="" className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none ">
+                  <select name="role" value={formData.role} onChange={handleInputChange} className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none ">
                     <option value="cutomer">Customer</option>
                     <option value="nursery">Nursery</option>
                   </select>
@@ -76,7 +96,7 @@ const Signup = () => {
 
                 <label className="text-headingColor font-bold text-[16px] leading-7 ">
                   Gender:
-                  <select name="gender" id="" className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none ">
+                  <select name="gender" value={formData.gender} onChange={handleInputChange} className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none ">
                     <option value="">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -94,6 +114,7 @@ const Signup = () => {
                   <input 
                     type="file" 
                     name='photo' 
+                    onChange={handleFileInputChange}
                     id='customFile' 
                     accept='.jpg, .png' 
                     className='absolute top-0 left-0 w-full opacity-0 cursor-pointer '
