@@ -6,10 +6,10 @@ const UserSchema =  new mongoose.Schema(
         password: { type: String, required: true },
         name: { type: String, required: true },
         phone: { type: Number },
-        photo: { type: String },
+        photo: { type: String }, 
         role: {
             type: String, 
-            enum: ["customer", "admin"],
+            enum: ["customer", "nursery"],
             default: "customer",
         },
         gender: { type: String, enum: ["male", "female", "other"] },
