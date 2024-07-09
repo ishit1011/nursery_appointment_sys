@@ -23,7 +23,7 @@ export const register = async(req,res) =>{
         if(role == 'customer'){
             user = await User.findOne({email})
         }
-        else if(role == 'nursery'){
+        else if(role == 'nursery'){ 
             user = await Nursery.findOne({email})
         }
 
@@ -129,7 +129,7 @@ export const login = async(req,res) =>{
             data: rest,
             role
         });
-        
+         
     } catch (err) {
         console.log(err);
         res.status(500).json({

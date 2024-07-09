@@ -8,7 +8,7 @@ export const updateNursery = async(req,res) => {
             id,
             { $set: req.body,},
             { new:true}
-        ).select("-password");
+        ).select("-password"); 
 
         res.status(200).json({
             success: true,
@@ -45,7 +45,7 @@ export const getSingleNursery = async(req,res) => {
     const id = req.params.id;
 
     try {
-        const nursery = await Nursery.findById(id).select("-password");
+        const nursery = await Nursery.findById(id).populate("reviews").select("-password");
 
         res.status(200).json({
             success: true,
@@ -65,6 +65,7 @@ export const getAllNursery = async(req,res) => {
 
     try {
 
+        // const nurserys = await Nursery.find({}).select("-password");
         const { query } = req.query;
         let nurserys;
 

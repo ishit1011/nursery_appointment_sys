@@ -3,7 +3,7 @@ import Nursery from '../models/NurserySchema.js';
 import User from '../models/UserSchema.js';
 
 export const authenticate = async (req, res, next) => {
-    // 1. Get token from HTML headers
+    // 1. Get token from HTML headers 
     const authToken = req.headers.authorization;
 
     // 2. Check if token exists and starts with 'Bearer '
