@@ -1,4 +1,5 @@
 import Nursery from "../models/NurserySchema.js";
+import Booking from "../models/BookingSchema.js";
 
 export const updateNursery = async(req,res) => {
     const id = req.params.id;
@@ -92,6 +93,36 @@ export const getAllNursery = async(req,res) => {
         res.status(500).json({
             success: false,
             message: "Failed to find nurserys"
+        });
+    }
+}
+
+export const getNurseryProfile = async(req,res) => {
+    const nurseryId = req.userId;
+    try {
+
+        const nursery = await Nursery.findById(nurseryId);
+
+        if(!nursery){
+            res.status(404).json({
+                success: false,
+                message: "Nursery not found"
+            })
+        }
+
+        const {password, ...rest} = nursery._doc;
+        const appointments = await Booking.find({nursery: nurseryId});
+
+        res.status(200).json({
+            success: true,
+            message: "Profile info found",
+            data: {...rest,appointments},
+        })
+         
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: "Failed to find user"
         });
     }
 }

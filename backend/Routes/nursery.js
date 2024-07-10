@@ -1,5 +1,5 @@
 import express from 'express'
-import {updateNursery, deleteNursery, getAllNursery, getSingleNursery} from '../Controllers/nurseryControllers.js'
+import {updateNursery, deleteNursery, getAllNursery, getSingleNursery, getNurseryProfile} from '../Controllers/nurseryControllers.js'
 import {authenticate,restrict} from '../auth/verifyToken.js'
 import reviewRouter from './review.js'
 
@@ -12,5 +12,7 @@ router.get("/:id",getSingleNursery);
 router.get("/",getAllNursery);
 router.put("/:id",authenticate,restrict(['nursery']),updateNursery);
 router.delete("/:id",authenticate,restrict(['nursery']),deleteNursery);
+
+router.get("/profile/me",authenticate,restrict(['nursery']),getNurseryProfile);
 
 export default router;
