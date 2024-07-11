@@ -53,12 +53,12 @@ const MyAccount = () => {
                     </div>
 
                     <div className="mt-[50px] md:mt-[100px]">
-                    <button onClick={logoutHandler} style={{ backgroundColor: '#181A1E', color: 'white' }} className="w-full p-3 text-[16px] leading-7 rounded-md">
-                        Logout
-                    </button>
-                    <button style={{ backgroundColor: '#DC2626', color: 'white' }} className="w-full mt-4 p-3 text-[16px] leading-7 rounded-md">
-                        Delete account
-                    </button>
+                        <button onClick={logoutHandler} style={{ backgroundColor: '#181A1E', color: 'white' }} className="w-full p-3 text-[16px] leading-7 rounded-md">
+                            Logout
+                        </button>
+                        <button style={{ backgroundColor: '#DC2626', color: 'white' }} className="w-full mt-4 p-3 text-[16px] leading-7 rounded-md">
+                            Delete account
+                        </button>
                     </div>
 
 
