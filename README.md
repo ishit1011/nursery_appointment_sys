@@ -1,5 +1,3 @@
-Sure! Here’s a comprehensive GitHub README for the nursery appointment system app named "Plantalia":
-
 ---
 
 # Plantalia
