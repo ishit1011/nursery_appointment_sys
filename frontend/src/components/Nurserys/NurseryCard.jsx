@@ -5,7 +5,7 @@ import {BsArrowRight} from 'react-icons/bs'
  
 const NurseryCard = ({nursery}) => {
     
-    const {name, speciality, avgRating, totalRating, photo, totalCustomers, nurseryAddress} = nursery;
+    const {name, specialization, averageRatings, totalRatings, photo, experiences} = nursery;
 
   return (
     <div className="p-3 lg:p-5">
@@ -19,35 +19,36 @@ const NurseryCard = ({nursery}) => {
 
         <div className="mt-2 lg:mt-4 flex items-center justify-between ">
             <span className="bg-[#CCF0F3] text-irisBlueColor py-1 px-2 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded ">
-                {speciality}
+                {specialization}
             </span>
             
             <div className="flex items-center gap-[6px] ">
                 <span className="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor ">
-                    <img src={starIcon} alt="" /> {avgRating}
+                    <img src={starIcon} alt="" /> {averageRatings}
                 </span>
                 <span className='flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor'>
-                    ({totalRating})
+                    ({totalRatings})
                 </span>
             </div>
         </div>
 
         <div className="mt-[18px] lg:mt-5 flex items-center justify-between ">
             <div>
-                <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold ">
+                {/* <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold ">
                     +{totalCustomers} customers
-                </h3>
+                </h3> */}
                 <p className="text-[14px] leading-6 font-[400] text-textColor ">
-                    {nurseryAddress}
+                    At {experiences && experiences[0]?.location}
                 </p>
             </div>
 
-            <Link to='/nurserys' className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none '>
+            <Link to={`/nurserys/${nursery._id}`} className='w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none '>
                 <BsArrowRight className='group-hover:text-white w-6 h-5 ' />
             </Link>
         </div>
 
     </div>
+    
   )
 }
 

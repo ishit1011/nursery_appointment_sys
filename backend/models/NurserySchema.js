@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const NurserySchema = new mongoose.Schema({
+const NurserySchema = new mongoose.Schema({ 
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
     name: {type: String, required: true},
     phone: {type: Number},
     photo: {type: String}, 
     ticketPrice: {type: Number},
-    role: {type: String,},
+    role: {type: String,}, 
     specialization: {type: String},
     qualifications: {type: Array,}, // mention certifications
     experiences: {type: Array,},
