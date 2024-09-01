@@ -4,7 +4,7 @@ const bookingSchema = new mongoose.Schema(
     {
         nursery: {
             type: mongoose.Types.ObjectId,
-            ref: "Nursery",
+            ref: "Nursery", 
             required: true,
         },
         user: {
