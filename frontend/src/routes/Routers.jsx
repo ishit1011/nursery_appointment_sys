@@ -9,7 +9,7 @@ import NurseryDetails from "../pages/Nurserys/NurseryDetails";
 import MyAccount from '../Dashboard/user-account/MyAccount';
 import Dashboard from '../Dashboard/nursery-account/Dashboard';
 import NotFound from './NotFound';
-
+import CheckoutSuccess from '../pages/CheckoutSuccess';
 import {Routes, Route} from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 
@@ -24,6 +24,7 @@ const Routers = () => {
       <Route path='/register' element={<Signup />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/services' element={<Services />} />
+      <Route path='/checkout-success' element={<CheckoutSuccess />} />
       <Route path='/users/profile/me' element={<ProtectedRoute allowedRoles={['customer']}><MyAccount /></ProtectedRoute>} />
       <Route path='/nurserys/profile/me' element={<ProtectedRoute allowedRoles={['nursery']}><Dashboard /></ProtectedRoute>} />
 
